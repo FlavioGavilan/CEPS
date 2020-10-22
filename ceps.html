@@ -1,0 +1,22 @@
+<!--Classe para fins de aprendizado-->
+<!--@author: Flávio Henrique Gavilan-->
+<!--@Empresa: everis-->
+<template>
+    <lightning-card title="Valore viaCep" icon-name="standard:record">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Id" disabled value={endereco_globalId} class="slds-hide"></lightning-input>
+            <lightning-input label="cep" maxlength="8" type="text" onchange={handleCepChange}></lightning-input>
+            
+            <lightning-input label="logradouro" disabled value={condicao.Logradouro__c} class="slds-var-m-bottom_x-small"></lightning-input>
+            <lightning-input label="bairro" disabled value={condicao.Bairro__c} class="slds-var-m-bottom_x-small"></lightning-input>
+            <lightning-input label="localidade" disabled value={condicao.Municipio__c} class="slds-var-m-bottom_x-small"></lightning-input>
+            <lightning-input label="uf" disabled value={condicao.Estado__c} class="slds-var-m-bottom_x-small"></lightning-input>
+            <lightning-input label="ibge" disabled value={condicao.Codigo_IBGE__c} class="slds-var-m-bottom_x-small"></lightning-input>
+            <lightning-input label="ddd" disabled value={condicao.DDD__c} class="slds-var-m-bottom_x-small"></lightning-input>
+            <lightning-input label="siafi" disabled value={condicao.Siafi__c} class="slds-var-m-bottom_x-small"></lightning-input>
+            
+            <lightning-button label="Cadastrar endereço" variant="brand" onclick={cadastrarEndereco}></lightning-button>
+            
+        </div>
+     </lightning-card>
+</template>
